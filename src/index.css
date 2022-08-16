@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+	--dark-bg: #000;
+	--light-bg: #fff;
+
+	--dark-text-hover-color: #fff;
+	--light-text-hover-color: #333;
+
+	--dark-navbar-color: #111;
+	--dark-navMenu-color: #222;
+	--dark-navSubMenu-color: #333;
+
+	--light-navbar-color: #eee;
+	--light-navMenu-color: #ddd;
+	--light-navSubMenu-color: #ccc;
+
+	--dark-navbar-color-hover: #333;
+	--dark-navMenu-color-hover: #555;
+	--dark-navSubMenu-color-hover: #666;
+
+	--light-navbar-color-hover: #ddd;
+	--light-navMenu-color-hover: #ccc;
+	--light-navSubMenu-color-hover: #bbb;
+
+	--dark-text: #444;
+	--light-text: #bbb;
+
+	--dark-active-bg: rgba(255, 255, 255, 0.099);
+	--light-active-bg: rgba(0, 0, 0, 0.099);
+
+	--font-heading: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
+html,
+body { overflow: hidden; }
+
+body::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #000;
+}
+
+body::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.dark {
+    color: var(--dark-text);
+}
+
+.light {
+    color: var(--light-text);
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+a { text-decoration: none; }

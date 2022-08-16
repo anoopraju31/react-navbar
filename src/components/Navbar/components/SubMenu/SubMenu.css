@@ -1,0 +1,33 @@
+.subMenu { padding: 10px; }
+
+.subMenu a.light,
+.subMenu a.dark {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    z-index: 10;
+    z-index: 100;
+}
+
+.subMenu a.light:link,
+.subMenu a.light:visited { 
+    color: var(--light-text); 
+    background-color: var(--light-navSubMenu-color) !important;
+}
+
+.subMenu a.dark:link,
+.subMenu a.dark:visited { 
+    color: var(--dark-text); 
+    background-color: var(--dark-navSubMenu-color) !important;
+}
+
+.subMenu a.light:hover{
+    color: var(--light-text-hover-color);
+    background-color: var(--light-navSubMenu-color-hover) !important;
+}
+
+.subMenu a.dark:hover {
+    color: var(--dark-text-hover-color);
+    background-color: var(--dark-navSubMenu-color-hover) !important;
+}

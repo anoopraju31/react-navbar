@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { Navbar } from './components/import'
+import { TemplatePage } from './Pages/import'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	const theme = useSelector(state => state.theme)
+
+	return (
+		<div className={theme? 'app-light' : 'app-dark'} >
+			<div className="container">        
+				<BrowserRouter>
+				<Navbar />
+				
+				<Routes> 
+					<Route path='/' element={<TemplatePage title='Home' />} />
+					<Route path='/about' element={<TemplatePage title='About' />} />
+					<Route path='/service/:id/' element={<TemplatePage title='Service' />} />
+					<Route path='/blog/:id/:section' element={<TemplatePage title='Blog' />} />
+					<Route path='/contact' element={<TemplatePage title='Contact' />} />
+				</Routes>
+				</BrowserRouter>
+			</div>
+		</div>
+	)
 }
 
-export default App;
+export default App
